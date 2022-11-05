@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { getCoints } from '../helpers/getCoints'
 import { cointGeckoAPI } from '../../data/endPoints'
+import './ftechapi.css'
 
 
 export const FtechApi = () => {
@@ -17,7 +18,8 @@ export const FtechApi = () => {
     }
 
     return (
-        <table className='table table-dark mt-4 table-hover' >
+        <div className="container">
+        <table className='table table-dark  table-hover' >
             <thead>
                 <tr>
                     {titles.map( (title, index) => <th key={index}>{title}</th> )}
@@ -36,8 +38,11 @@ export const FtechApi = () => {
                 ))}
             </tbody>
             
+            
 
         </table>
+        </div>
+        
     )
 }
 

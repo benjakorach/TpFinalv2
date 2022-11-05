@@ -7,33 +7,32 @@ import { faBtc } from '@fortawesome/free-brands-svg-icons' */
 export const NavBar = () => {
     return (
         <header>
-    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-      <div class="container-fluid">
-        <Link  class="navbar-brand" to="/"><i class="fa-brands fa-btc"></i> Wiki Crypto</Link>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+    <nav className="navbar navbar-expand-md navbar-light fixed-top bg-light">
+      <div className="container-fluid">
+        <Link  className="navbar-brand" to="/"> Wiki Crypto</Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
         
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div className="collapse navbar-collapse" id="navbarCollapse">
           
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <Link class="nav-link active" aria-current="page" to="/"><i class="fa-solid fa-house"></i> Home</Link>
+          <ul className="navbar-nav me-auto mb-2 mb-md-0">
+            <li className="nav-item">
+              <Link className="nav-link active" aria-current="page" to="/"> Home</Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link active" aria-current="page" to="/noticias"><i class="fa-solid fa-house"></i> Noticias</Link>
+            <li className="nav-item">
+              <Link className="nav-link active" aria-current="page" to="/noticias">Noticias</Link>
             </li>
-            <li class="nav-item">
-              <Link class="nav-link active" aria-current="page" to="#"><i class="fa-solid fa-house"></i> Wallet </Link>
+            <li className="nav-item">
+              <Link className="nav-link active" aria-current="page" to="#">Wallet </Link>
             </li>
           </ul>
-          {/*<button class="btn btn-primary" onclick="darkmode()"> <i class="fa-solid fa-moon"></i> </button>*/}
-          <form class="d-flex" role="search">
+          <form className="d-flex" role="search">
 
 
             
-            <button class="btn btn-outline-light" type="submit">Search</button>
+            <button className="btn btn-outline-light" type="submit">Search</button>
           </form>
           
         </div>
