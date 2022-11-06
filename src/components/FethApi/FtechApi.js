@@ -7,7 +7,7 @@ import './ftechapi.css'
 export const FtechApi = () => {
 
     const [cointList, setCointList] = useState([])
-    const titles = ['#', '', 'Coin', 'Price', '24hs Change', 'Volume']
+    const titles = ['#', '', 'Coin', 'Price', '24hs Change', 'Market Cap', 'Volume']
     
     try {
         const coints = getCoints(cointGeckoAPI)
@@ -33,7 +33,8 @@ export const FtechApi = () => {
                         <td>{coint.name}</td>
                         <td>${coint.price}</td>
                         <td className={coint.change < 0 ? "text-danger":"text-success"}>{coint.change}%</td>
-                        <td>${coint.volume}</td>
+                        <td>${coint.mcap.toLocaleString('en-US', {maximumFractionDigits:2})}</td>
+                        <td>${coint.volume.toLocaleString('en-US', {maximumFractionDigits:2})} </td>
                     </tr>
                 ))}
             </tbody>

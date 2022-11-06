@@ -10,7 +10,8 @@ export const getCoints = async (endPoint) => {
         image: coint.image,
         price: coint.current_price,
         change: coint.price_change_percentage_24h,
-        volume: coint.total_volume
+        volume: coint.total_volume,
+        mcap : coint.market_cap
     }))
 
     return coints
