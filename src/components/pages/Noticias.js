@@ -70,8 +70,7 @@ const Noticias = () => {
           </a>
         </div>
       </div>
-    </div>
-    <div className='col'>
+      <div className='col'>
         <div className='card'>
         <a href="https://cripto247.com/comunidad-cripto/el-gobierno-de-china-tiene-mas-bitcoins-que-cualquier-empresa-privada-224925/"> 
           <img src='https://cripto24.s3.amazonaws.com/media/uploads/2022/11/wood-door-1711004_1920-728x410.webp' className='card-img-top' alt='...' />
@@ -104,6 +103,7 @@ const Noticias = () => {
           </a>
         </div>
       </div>
+    </div>
     </div>
 
   )
