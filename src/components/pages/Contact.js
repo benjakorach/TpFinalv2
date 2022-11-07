@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Contact = () => {
-  return ( /* create a contact form */
+  return (
     <div className='container'>
         <div className='row'>
             <div className=''>
