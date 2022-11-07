@@ -6,7 +6,7 @@ export const Footer = () => {
     <footer className="footer mt-auto py-3 bg-light">
     <div className="container">
       <span className="text-muted">Wiki Crypto 2022. Todos los derechos reservados.</span>
-      <a href="/contac">Contacto</a>
+      <a href="/contact">Contacto</a>
     </div>
   </footer>
   )
