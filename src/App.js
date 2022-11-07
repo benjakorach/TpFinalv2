@@ -8,6 +8,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import { Home } from './components/pages/Home';
 import { Carrousel } from './components/Carrousel/Carrousel';
 import Noticias from './components/pages/Noticias';
+import Contact from './components/pages/Contact';
 
 
 
@@ -20,6 +21,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path='/noticias' element={<Noticias/>} />
+      <Route path="/contact" element={<Contact/>} />
     </Routes>
     <Footer />
 
