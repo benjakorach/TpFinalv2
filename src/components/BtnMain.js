@@ -1,16 +1,9 @@
 import React from 'react'
 
 export const BtnMain = ({url, targ, btnTxt}) => {
-  return (
-      <a  className='me-3'
-          href={url}
-          target={targ}
-      >
-          <button
-              className='btn btn-primary'
-          >
-              {btnTxt}
-          </button>
-      </a>
-  )
+  return (   /* every time it clicks, get that coint into a cart */
+    <a href={url} target={targ} className="btn btn-primary">{btnTxt}</a>
+    
+    
+    )
 }
