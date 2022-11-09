@@ -9,8 +9,8 @@ import { Home } from './components/pages/Home';
 import { Carrousel } from './components/Carrousel/Carrousel';
 import Noticias from './components/pages/Noticias';
 import Contact from './components/pages/Contact';
-import { Carrt } from './components/Carrt';
-import { CartProvider } from './components/context/CarrtContexxt';
+import Cart from './components/pages/Carrt';
+
 
 
 
@@ -23,6 +23,7 @@ function App() {
       <Route path="/" element={<Home/>} />
       <Route path='/noticias' element={<Noticias/>} />
       <Route path="/contact" element={<Contact/>} />
+      <Route path="/cart" element={<Cart/>} />
 {/*        <Route path="/carrt" element={<Carrt/>} />
  */}    </Routes>
     <Footer />

@@ -49,8 +49,8 @@ export const FtechApi = () => {
 }
 
 function addToCart(coint) {
-    cart.add(coint)
-    console.log(cart.cart)
+    cart.push(coint)
+    console.log(cart)
 }
 
 
