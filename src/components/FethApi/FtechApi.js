@@ -49,7 +49,12 @@ export const FtechApi = () => {
 }
 
 function addToCart(coint) {
-    cart.push(coint)
+    const index = cart.findIndex(item => item.id === coint.id)
+    if (index > -1) {
+        cart[index].count++
+    } else {
+        cart.push({ ...coint, count: 1 })
+    }
     console.log(cart)
 }
 
