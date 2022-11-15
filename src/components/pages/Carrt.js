@@ -22,6 +22,15 @@ function getStoreArray(key) {
     return cartArray
 }	
 
+function removefromcart(id) {
+    const index = cart.findIndex(item => item.id === id)  /* para buscar mediante el index */
+    if (index > -1) {                                    /* si el index es mayor a -1 */
+
+        cart.splice(index, 1)                            /* elimina el item del carrito */
+    }
+    console.log(cart)                                     /* imprime el carrito */
+}
+
 
 
 const Cart = () => {
@@ -41,7 +50,8 @@ const Cart = () => {
                                         </div>
                                         <div className="col-4">
                                             <p className="small text-muted mb-4 pb-2">Coin</p>
-                                            <p className="h5">{item.name}</p>
+                                            <p className="h5">{item.name}</p> 
+                                            <button className="btn btn-outline-danger" onClick={() => removefromcart(item.id)}>-</button>
                                         </div>
                                         <div className="col-2">
                                             <p className="small text-muted mb-4 pb-2">Items</p>
@@ -73,7 +83,10 @@ const Cart = () => {
                                             <p className="h5">${cart.reduce((a, c) => a + c.price * c.count, 0).toFixed(2)}</p>
                                             <div>
                                                 <button onClick={() => save(cart)}>Save</button>
-                                            </div>                                            
+                                            </div>                          
+                                            <div>
+                                                <button onClick={() => removefromcart(cart.id)}>Remove</button>    
+                                            </div>                  
                                         </div>
                                     </div>
                                 </div>

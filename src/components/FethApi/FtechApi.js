@@ -72,3 +72,4 @@ function addToCart(coint) { /* agregar base de datos (products) */
 
 
 
+
