@@ -1,6 +1,4 @@
 import React from "react";
-import { cointGeckoAPI } from "../../data/endPoints";
-
 import { cart } from "../context/CartContent";
 
 function save(cart) {
@@ -10,9 +8,10 @@ function save(cart) {
     localStorage.setItem("carts", JSON.stringify(cartArray));
 }
 
+
 function getStoreArray(key) {
     var cartArray = localStorage.getItem(key)
-    if (cartArray === null || cartArray == "") {	
+    if (cartArray === null || cartArray === "") {	
         cartArray = new Array();
     } else {
         cartArray = JSON.parse(cartArray);
@@ -22,6 +21,7 @@ function getStoreArray(key) {
 
     return cartArray
 }	
+
 
 
 const Cart = () => {
@@ -86,6 +86,7 @@ const Cart = () => {
         </div>
             )
 }
+
 
 
             export default Cart;
