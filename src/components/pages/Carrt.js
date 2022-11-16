@@ -11,7 +11,7 @@ function save(cart) {
 
 function getStoreArray(key) {
     var cartArray = localStorage.getItem(key)
-    if (cartArray === null || cartArray === "") {	
+    if (cartArray === null || cartArray === "") {
         cartArray = new Array();
     } else {
         cartArray = JSON.parse(cartArray);
@@ -20,7 +20,7 @@ function getStoreArray(key) {
 
 
     return cartArray
-}	
+}
 
 
 
@@ -59,7 +59,7 @@ const Cart = () => {
                                         </div>
                                         <div className="col-4">
                                             <p className="small text-muted mb-4 pb-2">Coin</p>
-                                            <p className="h5">{item.name}</p> 
+                                            <p className="h5">{item.name}</p>
                                             <button className="btn btn-outline-danger" onClick={() => removefromcart(item.id)}>-</button>
                                         </div>
                                         <div className="col-2">
@@ -88,17 +88,14 @@ const Cart = () => {
                                         <div className="col-12">
                                             <p className="h5">Total</p>
                                         </div>
-                                        <div className="col-12">                                            
+                                        <div className="col-12">
                                             <p className="h5">${cart.reduce((a, c) => a + c.price * c.count, 0).toFixed(2)}</p>
                                             <div>
-                                                <button  onClick={() => save(cart)}>Save</button>
-                                            </div>                          
-                                            <div>
-                                                <button onClick={() => removefromcart(cart.id)}>Remove</button>    
-                                            </div>         
+                                                <button onClick={() => save(cart)}>Save</button>
+                                            </div>
                                             <div>
                                                 <button onClick={() => cleanCart()}>Clean</button>
-                                            </div>         
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -109,9 +106,9 @@ const Cart = () => {
                 </div>
             </div>
         </div>
-            )
+    )
 }
 
 
 
-            export default Cart;
+export default Cart;
