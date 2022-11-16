@@ -22,6 +22,8 @@ function getStoreArray(key) {
     return cartArray
 }	
 
+
+
 function removefromcart(id) {
     const index = cart.findIndex(item => item.id === id)  /* para buscar mediante el index */
     if (index > -1) {                                    /* si el index es mayor a -1 */
@@ -30,6 +32,13 @@ function removefromcart(id) {
     }
     console.log(cart)                                     /* imprime el carrito */
 }
+
+function cleanCart() {
+    cart.splice(0, cart.length)
+    console.log(cart)
+}
+
+
 
 
 
@@ -82,11 +91,14 @@ const Cart = () => {
                                         <div className="col-12">                                            
                                             <p className="h5">${cart.reduce((a, c) => a + c.price * c.count, 0).toFixed(2)}</p>
                                             <div>
-                                                <button onClick={() => save(cart)}>Save</button>
+                                                <button  onClick={() => save(cart)}>Save</button>
                                             </div>                          
                                             <div>
                                                 <button onClick={() => removefromcart(cart.id)}>Remove</button>    
-                                            </div>                  
+                                            </div>         
+                                            <div>
+                                                <button onClick={() => cleanCart()}>Clean</button>
+                                            </div>         
                                         </div>
                                     </div>
                                 </div>
