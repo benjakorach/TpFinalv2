@@ -44,7 +44,7 @@ function cleanCart() {
 
 const Cart = () => {
     return (
-        <div className="vh-100">
+        <div className="">
             <div className="container h-200">
                 <div className="row d-flex justify-content-center align-items-center h-100">
                     <div className="col">
