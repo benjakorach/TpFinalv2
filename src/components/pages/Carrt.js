@@ -78,6 +78,7 @@ const Cart = () => {
                     </div>
                 </div>
             </div>
+
             <div>
                 <div className="container">
                     <div className="row">
